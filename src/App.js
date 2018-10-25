@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NinjaList from './NinjaList';
+import EnemyList from './EnemyList';
 
 class App extends Component {
   
@@ -7,6 +8,8 @@ class App extends Component {
     return (
       <div className="App">
         <NinjaList/>
+        <br></br>
+        <EnemyList/>
       </div>
     );
   }
