@@ -2,21 +2,17 @@ import React, { Component } from 'react'
 
 class Ninjas extends Component{
   
-  
-    handleClick = (props) => {
-        console.log(this.props.ninjas);
-     
-    };
-
     
-  render(){
-
+  render()
+  {
+   
     const { ninjas } = this.props;
     const ninjaList = ninjas.map(ninja => {
 
       return (
-        <div className="ninja" key={ninja.id} onClick={this.handleClick} >
-          <div>
+        <div className="ninja" key={ninja.id}  >
+
+          <div onClick={this.handleClick}>
           Name: { ninja.name }</div>
           <div>Age: { ninja.age }</div>
           <div>Belt: { ninja.belt }</div>
@@ -24,12 +20,18 @@ class Ninjas extends Component{
         </div>
       )
     });
+
     return (
       <div className="ninja-list">
         { ninjaList }
       </div>
     )
   }
+
+handleClick = () => {
+    console.log(this.props.ninjas);
+ 
+};
 }
 
 export default Ninjas;
