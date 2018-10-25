@@ -4,9 +4,9 @@ import Ninjas from './Ninjas'
 class NinjaList extends Component {
   state = {
     ninjas: [
-      { name: 'Kat', age: 30, belt: 'black', id: 1 },
-      { name: 'Ghandi', age: 20, belt: 'green', id: 2 },
-      { name: 'Leo', age: 25, belt: 'pink', id: 3 }
+      { name: 'Kat', age: 30, belt: 'black', force: '123', id: 1 },
+      { name: 'Ghandi', age: 20, belt: 'green', force: '10000', id: 2 },
+      { name: 'Leo', age: 25, belt: 'pink',force: '30', id: 3 }
     ]
   }
   render() {

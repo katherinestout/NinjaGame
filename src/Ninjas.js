@@ -9,6 +9,7 @@ class Ninjas extends Component{
           <div>Name: { ninja.name }</div>
           <div>Age: { ninja.age }</div>
           <div>Belt: { ninja.belt }</div>
+          <div>Force: {ninja.force}</div>
         </div>
       )
     });
