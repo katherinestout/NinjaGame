@@ -11,12 +11,16 @@ class NinjaList extends Component {
       { name: 'Obama', age: 45, belt: 'America',force: '85', id: 5 }
     ]
   }
+
+  
+
   render() {
     return (
       <div className="NinjaList">
         <h1>The Ninja Game</h1>
-        <p>Welcome to the dojo, select your ninja:</p>
-        <Ninjas ninjas={this.state.ninjas}/>
+        <p>Welcome to the dojo, select your ninja: </p>
+        <Ninjas ninjas={this.state.ninjas}
+   />
       </div>
     );
   }
