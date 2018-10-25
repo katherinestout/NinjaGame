@@ -20,4 +20,4 @@ class Ninjas extends Component{
   }
 }
 
-export default Ninjas
+export default Ninjas;
