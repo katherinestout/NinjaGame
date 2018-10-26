@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import Ninjas from './Ninjas'
 
 class NinjaList extends Component {
-  state = {
+  constructor(props) {
+    super(props);
+  this.state = {
     ninjas: [
       { name: 'Kat', age: 30, belt: 'purple', force: '123', id: 1 },
       { name: 'Ghandi', age: 200, belt: 'yellow', force: '10000', id: 2 },
@@ -10,8 +12,14 @@ class NinjaList extends Component {
       { name: 'Snoop Dog', age: 250, belt: 'green',force: '300', id: 4 },
       { name: 'Obama', age: 45, belt: 'America',force: '85', id: 5 }
     ]
-  }
+    
+  }}
 
+  handleClick = name => {
+    console.log(name);
+  }
+  renderNinjas = ninja => 
+  <Ninjas key = {ninja.name} ninja={ninja} onClick = {this.handleClick}/>
   
 
   render() {
@@ -19,8 +27,10 @@ class NinjaList extends Component {
       <div className="NinjaList">
         <h1>The Ninja Game</h1>
         <p>Welcome to the dojo, select your ninja: </p>
-        <Ninjas ninjas={this.state.ninjas}
-   />
+        <ul>
+        {this.state.ninjas.map(this.renderNinjas)}
+  
+   </ul>
       </div>
     );
   }
