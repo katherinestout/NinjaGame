@@ -7,9 +7,11 @@ class Ninjas extends React.Component {
   }
 
   render() {
+    //const ninja  = this.props.ninja;
     return (
       <li>
           <div onClick={this.handleClick}> {this.props.ninja.name}
+          {this.props.ninja.force}
           </div>
       </li>
     );
