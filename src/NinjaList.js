@@ -19,7 +19,7 @@ class NinjaList extends Component {
   handleClick = name => {
     console.log(name);
     this.setState({
-      selectNinja: this.state.selectNinja = name
+      selectNinja: this.state = name
     });
     //setstate
   }
