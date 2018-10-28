@@ -18,21 +18,26 @@ class NinjaList extends Component {
 
   handleClick = name => {
     console.log(name);
+    this.setState({
+      selectNinja: this.state.selectNinja = name
+    });
     //setstate
   }
   renderNinjas = ninja => 
-  <Ninjas key = {ninja.name} ninja={ninja} onClick = {this.handleClick}/>
+  <Ninjas key = {ninja.name} 
+    ninja={ninja} 
+    onClick = {this.handleClick}/>
   
 
   render() {
     return (
       <div className="NinjaList">
         <h1>The Ninja Game</h1>
-        <p>Welcome to the dojo, select your ninja: {} </p>
-        <ul>
+        <p>Welcome to the dojo, select your ninja: 
+            {this.state.selectNinja} </p>
+      <ul>
         {this.state.ninjas.map(this.renderNinjas)}
-  
-   </ul>
+      </ul>
       </div>
     );
   }
