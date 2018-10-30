@@ -1,24 +1,27 @@
-import React, { Component } from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-class Enemy extends Component{
-  render(){
-    const { enemies } = this.props;
-    const enemyList = enemies.map(enemy => {
-      return (
-        <div className="ninja" key={enemy.id}>
-          <div>Name: { enemy.name }</div>
-          <div>Age: { enemy.age }</div>
-          <div>Belt: { enemy.belt }</div>
-         
-        </div>
-      )
-    });
+class Enemy extends React.Component {
+  handleClick = () => {
+    this.props.onClick(this.props.enemy.name);
+  }
+
+  render() {
+    
     return (
-      <div className="enemy-list">
-        { enemyList }
-      </div>
-    )
+      <li>
+          <div onClick={this.handleClick}> 
+          {this.props.enemy.name}
+          {this.props.enemy.force}
+          </div>
+      </li>
+    );
   }
 }
+
+Enemy.propTypes = {
+  enemy: PropTypes.object.isRequired,
+  onClick: PropTypes.func.isRequired
+};
 
 export default Enemy;
