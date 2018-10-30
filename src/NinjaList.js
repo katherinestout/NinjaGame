@@ -24,7 +24,7 @@ class NinjaList extends Component {
     //setstate
   }
   renderNinjas = ninja => 
-  <Ninjas key = {ninja.name} 
+    <Ninjas key = {ninja.name} 
     ninja={ninja} 
     onClick = {this.handleClick}/>
   
