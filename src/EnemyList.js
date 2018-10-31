@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import Enemy from './Enemy'
+import Enemy from './Enemy';
+//import PropTypes from 'prop-types';
+//import NinjaList from './NinjaList';
 
 class EnemyList extends Component {
   constructor(props) {
@@ -12,7 +14,8 @@ class EnemyList extends Component {
       { name: 'Cat Woman', age: 67, belt: 'blue',force: '67', id: 9 },
       { name: 'Donald', age: 55, belt: 'white',force: '55', id: 10 }
     ],
-    selectEnemy: ''
+    selectEnemy: '',
+   
     
   }}
 
@@ -36,8 +39,12 @@ class EnemyList extends Component {
   render() {
     return (
       <div className="EnemyList">
-        <h1>The Ninja Game</h1>
-        <p>Welcome to the dojo, select your ninja: 
+        
+        <p>Welcome, Ninja
+           ! 
+
+        <br></br>
+        Select who you would like to challenge to a battle: 
             {this.state.selectEnemy} </p>
       <ul>
         {this.state.enemies.map(this.renderEnemy)}

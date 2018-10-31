@@ -9,7 +9,7 @@ class App extends Component {
       <div className="App">
         <NinjaList/>
         <br></br>
-        <EnemyList/>
+        <EnemyList />
       </div>
     );
   }

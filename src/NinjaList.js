@@ -26,6 +26,7 @@ class NinjaList extends Component {
     console.log(this.state.selectNinja);
     //setstate
   }
+
   renderNinjas = ninja => 
     <Ninjas key = {ninja.name} 
     ninja={ninja} 
@@ -37,6 +38,7 @@ class NinjaList extends Component {
       <div className="NinjaList">
         <h1>The Ninja Game</h1>
         <p>Welcome to the dojo, select your ninja: 
+          <br></br>
             {this.state.selectNinja} </p>
       <ul>
         {this.state.ninjas.map(this.renderNinjas)}
